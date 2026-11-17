@@ -1,0 +1,17 @@
+<mvc:View controllerName="training.assignments.app.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="mainPage" title="My First Fiori App">
+        <content>
+            <VBox id="contentBox" class="sapUiSmallMargin">
+                <Title id="welcomeTitle" text="Welcome to SAPUI5" />
+                <Text id="welcomeText" text="This is my first SAPUI5 application." />
+                <HBox id="buttonBox">
+                    <Button id="sayHelloButton" text="Say Hello" press=".onSayHello" class="sapUiSmallMarginTop" />
+                    <Button id="previewNameButton" text="Preview Name" press=".onPreviewName" class="sapUiSmallMarginTop" />
+                    <Button id="previewFallbackButton" text="Preview Fallback" press=".onPreviewFallback" class="sapUiSmallMarginTop" />
+                </HBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
