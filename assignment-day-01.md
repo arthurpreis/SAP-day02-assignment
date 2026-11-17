@@ -27,18 +27,24 @@
 | [D02-05] | Read Greeting.js | pass |
 | [D02-06] | Reload after repairing the deliberately wrong module path | pass |
 | [D02-07] | Use Tab and Enter/Space | pass |
-| [D02-08] | Run git log -1 --oneline and git status after the final commit |  |
+| [D02-08] | Run git log -1 --oneline and git status after the final commit | pass |
 
 ## One issue I investigated
 
-
+I was confused by the namespace and path definitions. Turns out modules can be loaded using relative paths.
 
 ## Reflection
 
-
+- Why should the fallback rule live in Greeting rather than in each event handler?
+If there is a change to the rule, we must modify only the internal logic of the function, without the need to rewrite every event handler that calls it.
+- Why must trimming happen before checking whether the name is empty?
+This way passing only whitespace as argument will fall in the fallback case.
+- How do saving, staging and committing differ?
+Saving stores the information on local non-volatile memory. Staging I'm not sure. Something about tracking the changed files. Commit freezes the state of the repo into the git history.
 ## References used
 
 [Lesson 01 Companion](https://fiori.codingwithhelder.com/lessons/frontend-lesson-01-companion)
+[Lesson 02 Companion](https://fiori.codingwithhelder.com/lessons/frontend-lesson-02-companion)
 
 ## Remaining work
 
